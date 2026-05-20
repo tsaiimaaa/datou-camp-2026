@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>我的超能夏天 — 大頭教練夏令營 2026</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&family=Barlow+Condensed:wght@700;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#e5e2dc;display:flex;justify-content:center;padding:28px 16px;font-family:'Noto Sans TC',sans-serif}
+.poster{width:600px;border-radius:20px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,.18);background:#fff}
+.hero{background:linear-gradient(150deg,#061829 0%,#0A2342 45%,#1A3F72 100%);padding:42px 40px 34px;position:relative;overflow:hidden}
+.hd1{position:absolute;top:-60px;right:-60px;width:240px;height:240px;border-radius:50%;background:rgba(245,166,35,.09)}
+.hd2{position:absolute;bottom:-50px;left:-40px;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,.04)}
+.hd3{position:absolute;top:28px;right:44px;font-size:90px;opacity:.07;line-height:1;pointer-events:none}
+.year-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(245,166,35,.18);border:1px solid rgba(245,166,35,.35);border-radius:20px;padding:4px 14px;margin-bottom:14px}
+.year-tag span{font-size:11px;font-weight:700;color:#F5A623;letter-spacing:.1em}
+.hero-lbl{font-size:10px;font-weight:700;color:rgba(255,255,255,.4);letter-spacing:.22em;text-transform:uppercase;font-family:'Barlow Condensed',sans-serif;margin-bottom:9px}
+.main-title{font-size:40px;font-weight:900;color:#fff;line-height:1.15;margin-bottom:5px;letter-spacing:.03em}
+.en-title{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;color:rgba(255,255,255,.4);letter-spacing:.22em;text-transform:uppercase;margin-bottom:22px}
+.hero-desc{font-size:13px;color:rgba(255,255,255,.78);line-height:1.78;border-left:3px solid #F5A623;padding-left:14px;max-width:440px}
+.pillars{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #F0F0F0}
+.pillar{padding:18px 10px 15px;text-align:center;border-right:1px solid #F0F0F0;position:relative}
+.pillar:last-child{border-right:none}
+.p-em{font-size:26px;display:block;margin-bottom:5px}
+.p-zh{font-size:20px;font-weight:900;color:#0A2342;display:block;margin-bottom:1px}
+.p-en{font-size:9px;font-weight:700;color:#BBB;letter-spacing:.12em;text-transform:uppercase}
+.p-bar{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:28px;height:3px;border-radius:2px}
+.p1 .p-bar{background:#F5A623}.p2 .p-bar{background:#4FC3F7}
+.p3 .p-bar{background:#81C784}.p4 .p-bar{background:#CE93D8}
+.week{padding:16px 28px;border-top:1px solid #F0F0F0}
+.sec-lbl{font-size:9px;font-weight:700;color:#F5A623;letter-spacing:.2em;text-transform:uppercase;margin-bottom:14px}
+.day-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:5px}
+.day-card{border-radius:10px;overflow:hidden}
+.day-head{padding:8px 4px 6px;text-align:center}
+.day-name{font-size:9px;font-weight:700;color:#fff;letter-spacing:.06em;display:block;margin-bottom:2px}
+.day-theme{font-size:11px;font-weight:900;color:#fff;line-height:1.15;white-space:nowrap}
+.day-body{padding:7px 7px 9px;background:#F8FAFB;border:1px solid #EEF0F3;border-top:none;border-radius:0 0 10px 10px}
+.day-act{font-size:8.5px;color:#444;line-height:1.5;display:block;word-break:keep-all}
+.day-loc{font-size:8.5px;color:#1565C0;margin-top:6px;display:block;font-weight:700;border-top:1px solid #EEF0F3;padding-top:5px}
+.d-mon .day-head{background:#1565C0}.d-tue .day-head{background:#2E7D32}
+.d-wed .day-head{background:#6A1B9A}.d-thu .day-head{background:#BF360C}
+.d-fri .day-head{background:#0A2342}
+.weather-note{margin:0 36px 14px;background:#FFFBEC;border:1px solid #F5DA8A;border-radius:8px;padding:7px 12px;font-size:10px;color:#7A5500;display:flex;align-items:center;gap:6px}
+.sched{padding:18px 36px;border-top:1px solid #F0F0F0}
+.srow{display:flex;align-items:center;gap:10px;margin-bottom:7px}
+.srow:last-child{margin-bottom:0}
+.stime{font-size:10px;font-weight:700;color:#F5A623;width:86px;flex-shrink:0;font-family:'Barlow Condensed',sans-serif}
+.sbar{flex:1;height:28px;border-radius:6px;padding:0 12px;font-size:10px;font-weight:700;display:flex;align-items:center;gap:5px}
+.sb-m{background:#D6E4F0;color:#1F4E79}
+.sb-a{background:#FCE4D6;color:#7B3210}
+.sb-s{background:#E2EFDA;color:#2D6A2D}
+.sb-l{background:#EEEEEE;color:#555}
+.sb-w{background:#1F4E79;color:#fff}
+.info{padding:16px 36px;border-top:1px solid #F0F0F0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.ii{text-align:center}
+.ii-em{font-size:20px;display:block;margin-bottom:4px}
+.ii-lbl{font-size:8px;color:#BBB;text-transform:uppercase;letter-spacing:.1em;display:block;margin-bottom:2px}
+.ii-val{font-size:13px;font-weight:700;color:#0A2342}
+.footer{background:#F5A623;padding:14px 36px;display:flex;align-items:center;justify-content:space-between}
+.ft-l{font-size:14px;font-weight:900;color:#0A2342}
+.ft-r{font-size:10px;color:rgba(10,35,66,.6);font-weight:600}
+.cta{background:#0A2342;color:#F5A623;border:none;border-radius:20px;padding:7px 18px;font-size:11px;font-weight:700;cursor:pointer;font-family:'Noto Sans TC',sans-serif;text-decoration:none;display:inline-block;transition:.2s}.cta:hover{background:#1F4E79}
+</style>
+</head>
+<body>
+<div class="poster">
+  <div class="hero">
+    <div class="hd1"></div><div class="hd2"></div><div class="hd3">🏃</div>
+    <div class="year-tag"><span>👨‍🏫 大頭教練 · 2026 暑假夏令營 　7/13(一)～7/17(五)</span></div>
+    <div class="hero-lbl">Summer Sports Camp</div>
+    <div class="main-title">我的超能夏天</div>
+    <div class="en-title">Move · Explore · Eat · Learn — My Super Summer</div>
+    <div class="hero-desc">大頭教練帶你用一週解鎖超能力！從博愛公園定向初級到原生植物園進階挑戰，攀樹走繩、足球棒球籃球輪番上陣，再到柴山生態遠征——每天換地點，每天新挑戰，這個夏天絕對不無聊！</div>
+  </div>
+
+  <div class="pillars">
+    <div class="pillar p1"><span class="p-em">⚡</span><span class="p-zh">動</span><span class="p-en">Move</span><div class="p-bar"></div></div>
+    <div class="pillar p2"><span class="p-em">🗺️</span><span class="p-zh">探</span><span class="p-en">Explore</span><div class="p-bar"></div></div>
+    <div class="pillar p3"><span class="p-em">🥗</span><span class="p-zh">吃</span><span class="p-en">Eat</span><div class="p-bar"></div></div>
+    <div class="pillar p4"><span class="p-em">📚</span><span class="p-zh">學</span><span class="p-en">Learn</span><div class="p-bar"></div></div>
+  </div>
+
+  <div class="week">
+    <div class="sec-lbl">✦ 五天課程一覽</div>
+    <div class="day-grid">
+      <div class="day-card d-mon">
+        <div class="day-head"><span class="day-name">7/13（一）</span><span class="day-theme">速度解鎖日</span></div>
+        <div class="day-body">
+          <span class="day-act">🗺️ 野外特務初級<br>⚡ 田徑基礎特訓<br>🧠 身體動作控制</span>
+          <span class="day-loc">📍 博愛公園・室內教室</span>
+        </div>
+      </div>
+      <div class="day-card d-tue">
+        <div class="day-head"><span class="day-name">7/14（二）</span><span class="day-theme">高空冒險日</span></div>
+        <div class="day-body">
+          <span class="day-act">🌳 攀樹走繩（上.下）<br>👨‍🍳 粉角綠豆湯DIY</span>
+          <span class="day-loc">📍 原生植物園・室內教室</span>
+        </div>
+      </div>
+      <div class="day-card d-wed">
+        <div class="day-head"><span class="day-name">7/15（三）</span><span class="day-theme">探索發現日</span></div>
+        <div class="day-body">
+          <span class="day-act">⚽ 足球控球<br>📚 左新圖書館<br>🐻 動物移動術</span>
+          <span class="day-loc">📍 博愛公園・左新圖書館</span>
+        </div>
+      </div>
+      <div class="day-card d-thu">
+        <div class="day-head"><span class="day-name">7/16（四）</span><span class="day-theme">進階挑戰日</span></div>
+        <div class="day-body">
+          <span class="day-act">🗺️ 野外特務進階(上.下)<br>⚾ 棒球揮擊</span>
+          <span class="day-loc">📍 原生植物園・室內教室</span>
+        </div>
+      </div>
+      <div class="day-card d-fri">
+        <div class="day-head"><span class="day-name">7/17（五）</span><span class="day-theme">柴山遠征日</span></div>
+        <div class="day-body">
+          <span class="day-act">🥗 運動營養小知識<br>🍄 博愛全聯採購<br>🌿 爬柴山戶外自然體驗</span>
+          <span class="day-loc">📍 室內教室・爬山</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="weather-note">⚠️ 課程地點可能依天氣狀況變更，屆時將於群組通知。</div>
+
+  <div class="sched">
+    <div class="sec-lbl" style="margin-bottom:12px">✦ 每日時程概覽</div>
+    <div class="srow">
+      <div class="stime">08:30 – 09:00</div>
+      <div class="sbar sb-m">🌅 🏃 晨間集合 &amp; 暖身操</div>
+    </div>
+    <div class="srow">
+      <div class="stime">09:00 – 10:30</div>
+      <div class="sbar sb-a">⚡ 主要運動課程（每日地點與主題不同）</div>
+    </div>
+    <div class="srow">
+      <div class="stime">10:30 – 10:45</div>
+      <div class="sbar sb-s">🍎 休息補給</div>
+    </div>
+    <div class="srow">
+      <div class="stime">10:45 – 12:00</div>
+      <div class="sbar sb-a">⚡ 主要運動課程（每日地點與主題不同）</div>
+    </div>
+    <div class="srow">
+      <div class="stime">12:00 – 13:30</div>
+      <div class="sbar sb-l">🍱 午餐 &amp; 休息時間</div>
+    </div>
+    <div class="srow">
+      <div class="stime">13:30 – 15:30</div>
+      <div class="sbar sb-a">⚡ 主要運動課程（每日地點與主題不同）</div>
+    </div>
+    <div class="srow">
+      <div class="stime">15:30 – 15:50</div>
+      <div class="sbar sb-s">🍎 點心時間</div>
+    </div>
+    <div class="srow">
+      <div class="stime">15:50 – 16:00</div>
+      <div class="sbar sb-w">📣 每日總結 &amp; 收操</div>
+    </div>
+  </div>
+
+  <div class="info">
+    <div class="ii"><span class="ii-em">🗓</span><span class="ii-lbl">活動時間</span><div class="ii-val">週一 ～ 週五</div></div>
+    <div class="ii"><span class="ii-em">⏰</span><span class="ii-lbl">每日時段</span><div class="ii-val">08:30 – 16:00</div></div>
+    <div class="ii"><span class="ii-em">📍</span><span class="ii-lbl">活動地點</span><div class="ii-val" style="font-size:11px;line-height:1.5">博愛公園・原生植物園・室內教室<br><span style="font-size:9px;color:#888;font-weight:400">（詳細地址群組公告）</span></div></div>
+  </div>
+
+  <!-- Social Links -->
+  <div style="padding:14px 36px;border-top:1px solid #F0F0F0;display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+    <a href="https://line.me/ti/g/MPAj-hb3bK" target="_blank"
+       style="display:inline-flex;align-items:center;gap:8px;background:#06C755;color:#fff;text-decoration:none;border-radius:20px;padding:8px 18px;font-size:12px;font-weight:700;font-family:'Noto Sans TC',sans-serif">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+      大頭教練_LAC 自信運動養成
+    </a>
+    <a href="https://www.facebook.com/TCLfitness2015/" target="_blank"
+       style="display:inline-flex;align-items:center;gap:8px;background:#1877F2;color:#fff;text-decoration:none;border-radius:20px;padding:8px 18px;font-size:12px;font-weight:700;font-family:'Noto Sans TC',sans-serif">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+      大頭教練愛運動
+    </a>
+  </div>
+
+  <div class="footer">
+    <div class="ft-l">🚀 立即報名，名額有限！</div>
+    <a class="cta" href="https://tsaiimaaa.github.io/2026summer/register.html" target="_blank">📝 立即報名 →</a>
+    <div class="ft-r">我的超能夏天 · 大頭教練夏令營 2026</div>
+  </div>
+</div>
+</body>
+</html>
